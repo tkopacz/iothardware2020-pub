@@ -14,8 +14,8 @@ private:
 	String CODES = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 
 	String IoTHub_name = "pltkdpepliot2016S1";//  # IoT Hub name
-	String IoTHub_key = "nD/PgMmBY3mA/8FXmGlLNK/zwQpTpvjrdoFHcOhRaIA=";// # IoT Hub primary key
-	String IoTHub_deviceId = "ioth2020ESP32MQTT";// # IoT Hub device id
+	String IoTHub_key = "....................";// # IoT Hub primary key
+	String IoTHub_deviceId = "...............";// # IoT Hub device id
 	String IoTHub_resourceURI = IoTHub_name + ".azure-devices.net";
 	static const int IoTHub_tokenExpirationPeriod = 360;
 	String IoTHub_apiVersion = "2018-06-30";
