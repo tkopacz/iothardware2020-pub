@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Net01IoTSender": {
+      "commandName": "Project",
+      "commandLineArgs": "-d 1"
+    }
+  }
+}

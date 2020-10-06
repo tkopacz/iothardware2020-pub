@@ -1,0 +1,39 @@
+THIS IS A MANUAL "DEPENDENCY" FOR PORTABLE CODE FOR DEMO
+
+; PlatformIO Project Configuration File
+;
+;   Build options: build flags, source filter
+;   Upload options: custom upload port, speed and extra flags
+;   Library options: dependencies, extra library storages
+;   Advanced options: extra scripting
+;
+; Please visit documentation for the other options and examples
+; https://docs.platformio.org/page/projectconf.html
+[common]
+pio_libdir = C:/Users/tkopa/.platformio/packages/framework-arduinoespressif32/libraries
+[env:esp-wrover-kit]
+platform = espressif32
+board = esp-wrover-kit
+framework = arduino
+build_flags = 
+    -DCORE_DEBUG_LEVEL=ARDUHAL_LOG_LEVEL_DEBUG 
+    -DDONT_USE_UPLOADTOBLOB 
+    -DESP32
+    -w 
+    -IInclude
+    -I${common.pio_libdir}/WiFi/src 
+    -I${common.pio_libdir}/WiFiClientSecure/src 
+    -Ilib/AzureIoTSocket_WiFi/src
+    -Ilib/AzureIoTHub/src
+    -Ilib/AzureIoTProtocol_HTTP/src
+    -Ilib/AzureIoTProtocol_MQTT/src
+    -Ilib/AzureIoTUtility/src
+lib_ldf_mode = off
+lib_deps =
+    lib/AzureIoTHub
+    lib/AzureIoTSocket_WiFi
+    lib/AzureIoTProtocol_MQTT
+    lib/AzureIoTProtocol_HTTP
+    lib/AzureIoTUtility
+    ${common.pio_libdir}/WiFi/src
+    ${common.pio_libdir}/WiFiClientSecure/src
